@@ -18,13 +18,14 @@
 }
 
 body {
-  width: 1440px;
+  max-width: 100%;
   height: 100vh;
   background-color: #fff;
-  margin: 0 auto;
 }
 
 .content {
+  width: 1440px;
+  margin: 0 auto;
   max-width: 100%;
   padding: 0 50px;
   display: flex;
@@ -76,7 +77,7 @@ header.navigation {
   color: var(--softRed);
 }
 
-button.login {
+button.red {
   font-size: 12px;
   padding: 8px 25px;
   font-weight: var(--fontWeight500);
@@ -91,7 +92,7 @@ button.login {
   cursor: pointer;
 }
 
-button.login:focus {
+button.red:focus {
   color: var(--softRed);
   background-color: transparent;
   border-color: var(--softRed);
@@ -114,7 +115,7 @@ button.login:focus {
 .hero-img,
 .features-img {
   position: relative;
-  width: 700px;
+  /* width: 700px; */
 }
 
 .hero-img > img,
@@ -218,13 +219,15 @@ button.blue-btn {
 }
 
 .feature-text h2,
-.download h2 {
+.download h2,
+.faq-head h2 {
   font-size: 25px;
   margin-bottom: 15px;
 }
 
 .feature-text p,
-.download p {
+.download p,
+.faq-head p {
   text-align: center;
   width: 500px;
   margin: 0 auto;
@@ -236,7 +239,7 @@ button.blue-btn {
   justify-content: space-between;
   text-transform: capitalize;
   padding: 10px 0;
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 2px solid #e0e0e0;
 }
 
 .feature-details ul li {
@@ -256,14 +259,16 @@ button.blue-btn {
 }
 
 .bookmark-text {
-  margin-left: 10rem;
+  margin-left: 7rem;
 }
 
-.download {
+.download,
+.faq-head {
   text-align: center;
 }
 
-.extension {
+.extension,
+.faq-container {
   margin-top: 100px;
 }
 
@@ -274,8 +279,9 @@ button.blue-btn {
 }
 
 .cards div {
+  width: 230px;
   margin: 0 15px;
-  padding: 20px 15px;
+  padding: 20px 0px;
   background-color: #fff;
   box-shadow: 0px 8px 10px 2px #e2e2e2;
   text-align: center;
@@ -295,6 +301,7 @@ button.blue-btn {
   width: 100%;
   font-size: 14px;
   padding-bottom: 20px;
+  border-bottom: 2px dashed var(--grayishBlue);
 }
 
 .cards div:nth-child(2) {
@@ -303,4 +310,184 @@ button.blue-btn {
 
 .cards div:nth-child(3) {
   margin-top: 80px;
+}
+
+.cards button {
+  margin-top: 10px;
+}
+
+.faq-head {
+  margin-bottom: 40px;
+}
+
+.faqs {
+  width: 600px;
+  margin: 0 auto;
+}
+
+.faqs .faq {
+  border-top: 2px solid #e0e0e0;
+  padding: 15px 0;
+}
+
+.faq:nth-child(4) {
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.faq-que {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.faq-que:hover p {
+  color: var(--softRed);
+}
+
+.faq-que:active img {
+  stroke: var(--softRed);
+}
+
+.faqs .faq-ans {
+  color: var(--grayishBlue);
+  margin: 30px 0 0px;
+  display: none;
+}
+
+.faqs .faq-ans.show-ans {
+  display: block;
+}
+
+.faq-container button {
+  display: block;
+  margin: 0 auto;
+}
+.btn-div {
+  margin: 30px 0 100px;
+}
+
+footer .top-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  background-color: var(--softBlue);
+  color: #fff;
+  padding: 5rem 0;
+}
+
+footer h4 {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+footer h2 {
+  font-size: 30px;
+}
+
+.top-content .mail {
+  display: flex;
+  gap: 10px;
+}
+
+.top-content .mail input {
+  position: relative;
+  width: 250px;
+  height: 40px;
+  border-radius: 4px;
+  border: none;
+  padding: 0px 5px;
+  outline-color: var(--softBlue);
+  font-size: 16px;
+  font-weight: var(--fontWeight500);
+}
+
+.top-content .mail input .error {
+  outline-color: var(--softRed);
+}
+
+.top-content .mail-input {
+  display: flex;
+  position: relative;
+}
+
+.img {
+  display: none;
+  position: absolute;
+  top: 25%;
+  right: 5%;
+}
+
+.img.error {
+  display: block;
+}
+
+.mail-input:before {
+  display: none;
+  content: "Whoops, make sure it is an email";
+  font-style: italic;
+  position: absolute;
+  border-radius: 5px;
+  width: 245px;
+  height: 25px;
+  left: -2px;
+  top: -2px;
+  padding: 50px 5px 0px;
+  background-color: var(--softRed);
+}
+
+button.contact {
+  text-transform: capitalize;
+  font-weight: 600;
+  box-shadow: none;
+  outline: none;
+  border-radius: 3px;
+  height: 40px;
+}
+
+button.contact:focus {
+  background-color: #fff;
+}
+
+.bottom-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: var(--veryDarkBlue);
+  padding: 20px 0;
+  color: #fff;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.footer-links ul {
+  display: flex;
+}
+
+.footer-links ul li {
+  text-decoration: none;
+  list-style-type: none;
+  margin-left: 30px;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.socials {
+  display: flex;
+  gap: 40px;
+}
+
+.socials svg {
+  display: block;
+  cursor: pointer;
+}
+
+.socials svg path:hover {
+  fill: var(--softRed);
 }
