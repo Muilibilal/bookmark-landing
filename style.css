@@ -103,8 +103,8 @@ button.red:focus {
   display: flex;
   margin-top: 60px;
   align-items: center;
-  min-width: 100%;
-  gap: 130px;
+  max-width: 100%;
+  /* gap: 130px; */
 }
 
 .hero,
@@ -115,19 +115,20 @@ button.red:focus {
 .hero-img,
 .features-img {
   position: relative;
-  /* width: 700px; */
+  width: 600px;
 }
 
 .hero-img > img,
 .features-img > img {
-  min-width: 50%;
+  width: 100%;
 }
 
 .background-ill {
   position: absolute;
   z-index: -1;
-  top: 35%;
-  right: 0;
+  top: 25%;
+  left: 20%;
+  /* overflow-x: hidden; */
   border-radius: 0 0 0 150px;
   width: 500px;
   height: 300px;
@@ -135,7 +136,7 @@ button.red:focus {
 }
 
 .second {
-  left: -30%;
+  left: -50%;
   width: 650px;
   border-radius: 0 0 150px 0;
 }
@@ -153,7 +154,7 @@ button.red:focus {
 .hero-text,
 .bookmark-text {
   /* width: 450px; */
-  min-width: 50%;
+  width: 50%;
   font-size: 20px;
   text-align: left;
 }
