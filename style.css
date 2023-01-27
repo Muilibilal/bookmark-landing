@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap");
 :root {
   /* Primary */
   --softBlue: hsl(231, 69%, 60%);
@@ -18,13 +19,14 @@
 }
 
 body {
+  font-family: "Rubik", sans-serif;
   max-width: 100%;
   height: 100vh;
   background-color: #fff;
 }
 
 .content {
-  width: 1440px;
+  /* width: 1440px; */
   margin: 0 auto;
   max-width: 100%;
   padding: 0 50px;
@@ -33,7 +35,8 @@ body {
 }
 
 header.navigation {
-  margin-top: 50px;
+  margin-top: 30px;
+  padding-right: 150px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -67,7 +70,7 @@ header.navigation {
 }
 
 .links li a {
-  font-weight: var(--fontWeight500);
+  font-weight: var(--fontWeight400);
   text-decoration: none;
   color: var(--veryDarkBlue);
   cursor: pointer;
@@ -75,6 +78,7 @@ header.navigation {
 
 .links li a:focus {
   color: var(--softRed);
+  font-weight: var(--fontWeight500);
 }
 
 button.red {
@@ -103,11 +107,12 @@ button.red:focus {
   display: flex;
   margin-top: 60px;
   align-items: center;
+  justify-content: space-around;
   max-width: 100%;
   /* gap: 130px; */
 }
 
-.hero,
+.fea .hero,
 .features {
   margin-bottom: 100px;
 }
@@ -136,7 +141,8 @@ button.red:focus {
 }
 
 .second {
-  left: -50%;
+  top: 35%;
+  left: -30%;
   width: 650px;
   border-radius: 0 0 150px 0;
 }
@@ -153,14 +159,12 @@ button.red:focus {
 
 .hero-text,
 .bookmark-text {
-  /* width: 450px; */
-  width: 50%;
-  font-size: 20px;
   text-align: left;
 }
 
 .hero-text h1 {
-  font-size: 45px;
+  font-size: 4rem;
+  color: var(--veryDarkBlue);
 }
 
 .hero-text p,
@@ -192,6 +196,7 @@ button {
 button.blue-btn {
   background-color: var(--softBlue);
   color: #fff;
+  font-weight: var(--fontWeight500);
 }
 
 .hero-buttons .chrome-btn:focus,
@@ -244,11 +249,11 @@ button.blue-btn {
 }
 
 .feature-details ul li {
-  font-weight: var(--fontWeight500);
   list-style-type: none;
 }
 
 .feature-details ul li a {
+  font-weight: var(--fontWeight400);
   color: #4d4d4d;
   padding: 10px 30px;
   border-bottom: 1px solid transparent;
@@ -256,11 +261,8 @@ button.blue-btn {
 }
 
 .feature-details ul > li a:focus {
+  font-weight: var(--fontWeight500);
   border-bottom: 2px solid var(--softRed);
-}
-
-.bookmark-text {
-  margin-left: 7rem;
 }
 
 .download,
@@ -401,7 +403,8 @@ footer h2 {
   padding: 0px 5px;
   outline-color: var(--softBlue);
   font-size: 16px;
-  font-weight: var(--fontWeight500);
+  font-weight: var(--fontWeight400);
+  font-family: "Rubik", sans-serif;
 }
 
 .top-content .mail input .error {
@@ -460,6 +463,10 @@ button.contact:focus {
   color: #fff;
 }
 
+.bottom-content li:hover {
+  color: var(--softRed);
+}
+
 .footer-links {
   display: flex;
   align-items: center;
@@ -481,6 +488,7 @@ button.contact:focus {
 
 .socials {
   display: flex;
+  align-items: center;
   gap: 40px;
 }
 
