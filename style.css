@@ -31,6 +31,7 @@ body {
   max-width: 100%;
   padding: 0 50px;
   display: flex;
+  /* overflow: hidden; */
   flex-direction: column;
 }
 
@@ -105,22 +106,30 @@ button.red:focus {
 .hero,
 .feature-change {
   display: flex;
-  margin-top: 60px;
+  margin: 60px 0 50px;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   max-width: 100%;
   /* gap: 130px; */
 }
 
+.feature-change {
+  margin: 40px 0 0px;
+}
+
 .fea .hero,
 .features {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 100px;
 }
 
 .hero-img,
 .features-img {
   position: relative;
-  width: 600px;
+  width: 40%;
 }
 
 .hero-img > img,
@@ -131,19 +140,19 @@ button.red:focus {
 .background-ill {
   position: absolute;
   z-index: -1;
-  top: 25%;
-  left: 20%;
+  top: 40%;
+  left: 15%;
   /* overflow-x: hidden; */
   border-radius: 0 0 0 150px;
-  width: 500px;
-  height: 300px;
+  width: 90%;
+  height: 65%;
   background-color: var(--softBlue);
 }
 
 .second {
-  top: 35%;
-  left: -30%;
-  width: 650px;
+  top: 50%;
+  left: -35%;
+  width: 130%;
   border-radius: 0 0 150px 0;
 }
 .third {
@@ -160,16 +169,19 @@ button.red:focus {
 .hero-text,
 .bookmark-text {
   text-align: left;
+  width: 50%;
 }
 
 .hero-text h1 {
-  font-size: 4rem;
+  width: 70%;
+  font-size: 3rem;
   color: var(--veryDarkBlue);
 }
 
 .hero-text p,
 .bookmark-text p {
-  width: 450px;
+  width: 70%;
+  margin: 20px 0;
 }
 
 .grey-text {
@@ -177,9 +189,8 @@ button.red:focus {
   font-size: var(--fontSize);
 }
 
-.hero-text *:not(:last-child),
-.bookmark-text *:not(:last-child) {
-  margin-bottom: 30px;
+.hero-text {
+  margin-right: 10px;
 }
 
 button {
@@ -197,6 +208,17 @@ button.blue-btn {
   background-color: var(--softBlue);
   color: #fff;
   font-weight: var(--fontWeight500);
+}
+
+.hero-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 20px;
+}
+
+.hero-buttons .chrome-btn {
+  margin-right: 10px;
 }
 
 .hero-buttons .chrome-btn:focus,
@@ -220,7 +242,7 @@ button.blue-btn {
 .feature-text,
 .feature-details {
   text-align: center;
-  width: 700px;
+  width: 70%;
   margin: 0 auto;
 }
 
@@ -235,32 +257,51 @@ button.blue-btn {
 .download p,
 .faq-head p {
   text-align: center;
-  width: 500px;
+  width: 50%;
   margin: 0 auto;
   margin-bottom: 20px;
 }
 
+@media (max-width: 700px) {
+  .feature-text p,
+  .download p,
+  .faq-head p {
+    width: 100%;
+  }
+
+  .hero-text h1 {
+    width: 100%;
+    font-size: 1.9rem;
+  }
+
+  .hero-text p,
+  .bookmark-text p {
+    width: 100%;
+  }
+}
+
 .feature-details ul {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
   text-transform: capitalize;
-  padding: 10px 0;
+  padding: 0;
   border-bottom: 2px solid #e0e0e0;
 }
 
 .feature-details ul li {
   list-style-type: none;
+  width: 33%;
+  padding: 10px 30px;
+  border-bottom: 1px solid transparent;
 }
 
 .feature-details ul li a {
   font-weight: var(--fontWeight400);
   color: #4d4d4d;
-  padding: 10px 30px;
-  border-bottom: 1px solid transparent;
   text-decoration: none;
 }
 
-.feature-details ul > li a:focus {
+.feature-details ul > li:hover {
   font-weight: var(--fontWeight500);
   border-bottom: 2px solid var(--softRed);
 }
@@ -284,7 +325,7 @@ button.blue-btn {
 .cards div {
   width: 230px;
   margin: 0 15px;
-  padding: 20px 0px;
+  padding: 20px 10px;
   background-color: #fff;
   box-shadow: 0px 8px 10px 2px #e2e2e2;
   text-align: center;
@@ -304,7 +345,7 @@ button.blue-btn {
   width: 100%;
   font-size: 14px;
   padding-bottom: 20px;
-  border-bottom: 2px dashed var(--grayishBlue);
+  /* border-bottom: 2px dashed var(--grayishBlue); */
 }
 
 .cards div:nth-child(2) {
@@ -324,7 +365,7 @@ button.blue-btn {
 }
 
 .faqs {
-  width: 600px;
+  width: 60%;
   margin: 0 auto;
 }
 
@@ -499,4 +540,12 @@ button.contact:focus {
 
 .socials svg path:hover {
   fill: var(--softRed);
+}
+
+.dots {
+  background-image: url(images/bg-dots.svg);
+  background-repeat: no-repeat;
+  width: 100%;
+  display: block;
+  height: 5px;
 }
