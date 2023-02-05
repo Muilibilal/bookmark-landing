@@ -9,6 +9,13 @@
     justify-content: space-between;
     padding-right: 0px;
     z-index: 100;
+    position: fixed;
+    margin: 0;
+    padding: 20px 10px;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
   }
 
   .nav-links {
@@ -46,6 +53,10 @@
     /* align-items: center; */
     justify-content: center;
     margin: 40px;
+  }
+
+  div.socials.nav-socials {
+    display: flex;
   }
 
   .nav-links ul {
@@ -151,6 +162,10 @@
     width: 100%;
   }
 
+  .hero {
+    margin-top: 100px;
+  }
+
   .features {
     flex-direction: column;
   }
@@ -229,8 +244,16 @@
   .cards div {
     width: 80%;
     padding: 30px 0;
+    margin: 20px 0;
   }
 
+  .cards div:nth-child(2) {
+    margin-top: 0px;
+  }
+
+  .cards div:nth-child(3) {
+    margin-top: 0px;
+  }
   .cards div .small {
     text-align: center;
   }

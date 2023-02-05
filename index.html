@@ -13,6 +13,7 @@
     />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/mobile.css" />
+    <script src="app.js" defer></script>
     <title>Frontend Mentor | Bookmark landing page</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -32,7 +33,7 @@
         <div class="logo" style="z-index: 10">
           <img src="images/logo-bookmark.svg" alt="bookmark-site-logo" />
         </div>
-        <nav class="active nav-links">
+        <nav class="nav-links">
           <div class="sm-nav-links">
             <ul class="links">
               <li><a href="#">features</a></li>
@@ -95,9 +96,11 @@
         </div>
         <div class="feature-details">
           <ul>
-            <li class="bookmark-select"><a href="#">Simple Bookmarking</a></li>
-            <li class="searching"><a href="#">Speedy Searching</a></li>
-            <li class="sharing"><a href="#">Easy Sharing</a></li>
+            <li class="bookmark-select featured">
+              <a href="#">Simple Bookmarking</a>
+            </li>
+            <li class="searching featured"><a href="#">Speedy Searching</a></li>
+            <li class="sharing featured"><a href="#">Easy Sharing</a></li>
           </ul>
         </div>
         <aside class="feature-change">
@@ -118,40 +121,6 @@
             <button class="blue-btn">More Info</button>
           </div>
         </aside>
-        <!-- <aside class="feature-change">
-            <div class="features-img">
-              <img
-                src="images/illustration-features-tab-2.svg"
-                alt="Illustration2"
-              />
-              <div class="background-ill third"></div>
-            </div>
-            <div class="bookmark-text">
-              <h2 class="titles">Intelligent search</h2>
-              <p class="grey-text">
-                Our powerful search feature will help you find saved sites in no
-                time at all. No need to trawl through all of your bookmarks.
-              </p>
-              <button class="blue-btn">More Info</button>
-            </div>
-          </aside>
-          <aside class="feature-change">
-            <div class="features-img">
-              <img
-                src="images/illustration-features-tab-3.svg"
-                alt="Illustration3"
-              />
-              <div class="background-ill fourth"></div>
-            </div>
-            <div class="bookmark-text">
-              <h2 class="titles">Share your bookmarks</h2>
-              <p class="grey-text">
-                Easily share your bookmarks and collections with others. Create
-                a shareable link that you can send at the click of a button.
-              </p>
-              <button class="blue-btn">More Info</button>
-            </div>
-          </aside> -->
       </section>
       <section class="extension">
         <div class="download">
@@ -197,7 +166,13 @@
           <div class="faq faq1">
             <div class="faq-que">
               <p>What is a Bookmark</p>
-              <img src="images/icon-arrow.svg" alt="" />
+              <div>
+                <img
+                  src="images/icon-arrow.svg"
+                  alt=""
+                  style="transform: rotate(80%)"
+                />
+              </div>
             </div>
             <p class="faq-ans">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
@@ -258,6 +233,7 @@
             <div class="img">
               <img src="images/icon-error.svg" alt="mail" />
             </div>
+            <div class="error"></div>
           </div>
           <button class="red contact">Contact Us</button>
         </div>
