@@ -85,15 +85,28 @@ const validateEmail = function (email) {
 
 let input = document.querySelector("input[type = email]");
 
-document.querySelector(".contact").addEventListener("submit", (e) => {
+document.querySelector(".contact").addEventListener("click", (e) => {
   e.preventDefault();
 
   if (!validateEmail(input.value)) {
-    document.querySelector(".error").innerHTML =
-      "Whoops, make sure it's an email";
+    document.querySelector(".error").classList.add("show-error");
+    validate("Whoops, make sure it is an email", "red", "#fff");
+  } else {
+    document.querySelector(".error").classList.add("show-error");
+    validate("Email validated", "green", "#fff");
   }
-
-  document.querySelector(".error").innertext = "Email Accepted";
-
-  document.querySelector(".error").style.backgroundColor = "green";
 });
+
+function validate(message, bgColor, color) {
+  let view = document.querySelector(".error");
+
+  view.textContent = message;
+  view.style.backgroundColor = bgColor;
+  view.style.color = color;
+
+  setTimeout(() => {
+    view.textContent = "";
+    view.style.backgroundColor = "transparent";
+    view.classList.remove("show-error");
+  }, 3000);
+}

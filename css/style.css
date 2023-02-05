@@ -450,7 +450,7 @@ footer h2 {
 
 .top-content .mail {
   display: flex;
-  gap: 10px;
+  gap: 30px;
 }
 
 .top-content .mail input {
@@ -483,12 +483,8 @@ footer h2 {
   right: 5%;
 }
 
-.img.error {
-  display: block;
-}
-
 .mail-input .error {
-  display: block;
+  display: none;
   font-style: italic;
   position: absolute;
   top: 45px;
@@ -500,10 +496,14 @@ footer h2 {
   background-color: var(--softRed);
 }
 
+.mail-input .show-error {
+  display: block;
+}
+
 button.contact {
   text-transform: capitalize;
   font-weight: 600;
-  margin-top: 20px;
+  /* margin-top: 20px; */
   box-shadow: none;
   outline: none;
   border-radius: 3px;
